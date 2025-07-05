@@ -4,6 +4,7 @@ import Hero from "../sections/Hero";
 import AboutUs from "../sections/AboutUs";
 import Personality from "../sections/Personality";
 import Bold from "../sections/Bold";
+import Testimonials from "../sections/Testimonials";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <Personality></Personality>
       <Bold></Bold>
       {/* testimonials */}
+      <Testimonials></Testimonials>
       {/* Cta */}
       {/* Footer */}
     </main>
