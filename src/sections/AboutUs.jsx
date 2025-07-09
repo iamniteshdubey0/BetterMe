@@ -3,6 +3,7 @@ import { MissionSection } from "../constants/constant";
 import { PersonStanding } from "lucide-react";
 import MissionCard from "../components/MissionCard";
 import { Images } from "../constants/constant";
+import RandomDots from "../components/RandomDots";
 
 const AboutUs = () => {
   return (
@@ -36,7 +37,8 @@ const AboutUs = () => {
             <MissionCard></MissionCard>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 my-24">
+        <div className="relative grid grid-cols-1 md:grid-cols-4 my-24">
+          <RandomDots count={4}></RandomDots>
           <div className="">
             <img
               src={Images[0]}

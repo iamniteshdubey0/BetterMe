@@ -5,6 +5,8 @@ import AboutUs from "../sections/AboutUs";
 import Personality from "../sections/Personality";
 import Bold from "../sections/Bold";
 import Testimonials from "../sections/Testimonials";
+import Cta from "../sections/Cta";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -21,7 +23,9 @@ const Home = () => {
       {/* testimonials */}
       <Testimonials></Testimonials>
       {/* Cta */}
+      <Cta></Cta>
       {/* Footer */}
+      <Footer></Footer>
     </main>
   );
 };
