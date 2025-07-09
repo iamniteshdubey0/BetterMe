@@ -8,6 +8,17 @@ import s7 from "../assets/SVG/7SCENE.svg";
 import s8 from "../assets/SVG/8SCENE.svg";
 import s9 from "../assets/SVG/9SCENE.svg";
 import s10 from "../assets/SVG/10SCENE.svg";
+import {
+  Apple,
+  BrickWallFire,
+  ChartBarIncreasing,
+  Flower2Icon,
+  ImageIcon,
+  RailSymbolIcon,
+  ThumbsUp,
+  Vault,
+} from "lucide-react";
+import { title } from "framer-motion/client";
 
 export const Images = [s1, s2, s3, s4, s5];
 
@@ -37,27 +48,29 @@ export const HeroSection = {
 export const MissionSection = {
   title:
     "Our mission is to provide individuals with\nvaluable insights into their personality",
-  mission: {
-    title: "Our Mission",
-    heading:
-      "Our mission is to empower individuals to embrace their boldness and live authentically.",
-    description:
-      "We believe that everyone possesses unique traits and strengths that, when embraced, can lead to personal growth, fulfillment, and success.",
-  },
-  expertise: {
-    title: "Our Expertise",
-    heading:
-      "With years of experience in the field of personality development and self-improvement.",
-    description:
-      "Our professionals hold advanced degrees in psychology and have extensive training in coaching and counseling.",
-  },
-  approach: {
-    title: "Our Approach",
-    heading:
-      "At Bold, we take a holistic approach to help individuals embrace their boldness.",
-    description:
-      "We understand that boldness encompasses various aspects of life, including mindset, communication, self-confidence, and goal-setting.",
-  },
+  missionCards: [
+    {
+      title: "Our Mission",
+      heading:
+        "Our mission is to empower individuals to embrace their boldness and live authentically.",
+      description:
+        "We believe that everyone possesses unique traits and strengths that, when embraced, can lead to personal growth, fulfillment, and success.",
+    },
+    {
+      title: "Our Expertise",
+      heading:
+        "With years of experience in the field of personality development and self-improvement.",
+      description:
+        "Our professionals hold advanced degrees in psychology and have extensive training in coaching and counseling.",
+    },
+    {
+      title: "Our Approach",
+      heading:
+        "At Bold, we take a holistic approach to help individuals embrace their boldness.",
+      description:
+        "We understand that boldness encompasses various aspects of life, including mindset, communication, self-confidence, and goal-setting.",
+    },
+  ],
   quote: {
     text: "Welcome to Bold, where we believe in the transformative power of embracing your uniqueness and living fearlessly",
     author: "Ghea, your bold CEO",
@@ -65,6 +78,7 @@ export const MissionSection = {
 };
 
 export const PersonalityTypesSection = {
+  label: "Personality Types",
   title:
     "Test Descriptions: Discover Your Personality Type, Relationship Compatibility Test, Career Aptitude Test.",
   cta: "Read More",
@@ -75,22 +89,28 @@ export const BoldnessTraitsSection = {
     "We believe that boldness encompasses a range of distinct characteristics that define and empower individuals",
   description:
     "These bold traits are not limited to a single definition but form a vibrant spectrum of qualities that, when embraced, can lead to personal growth, resilience, and success.",
-  traits: [
-    "Confidence",
-    "Assertiveness",
-    "Risk-Taking",
-    "Perseverance",
-    "Growth Mindset",
-    "Authenticity",
-  ],
+  traits: {
+    title: "Bold Traits",
+    bt: [
+      { icon: <ThumbsUp />, label: "Confidence" },
+      { icon: <ImageIcon />, label: "Assertiveness" },
+      { icon: <BrickWallFire />, label: "Risk-Taking" },
+      { icon: <Flower2Icon />, label: "Perseverance" },
+      { icon: <ChartBarIncreasing />, label: "Growth Mindset" },
+      { icon: <Vault />, label: "Authenticity" },
+    ],
+  },
   appDownload: {
-    appStore: "App Store",
-    playStore: "Google Play",
-    buttonText: "Download the App",
+    avail: [
+      { platform: "Google Play", icon: <RailSymbolIcon size={28} /> },
+      { platform: "App Store", icon: <Apple size={28} /> },
+    ],
+    btn: { title: "Download Now", link: "#" },
   },
 };
 
 export const TestimonialSection = {
+  title:"Testimonials",
   quote:
     "Bold helped me recognize my strengths and step outside my comfort zone. I'm now living a more fulfilling and adventurous life.",
   name: "Amber Augustin",

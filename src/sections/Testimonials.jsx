@@ -1,5 +1,5 @@
-import React from "react";
 import RandomDots from "../components/RandomDots";
+import { TestimonialSection } from "../constants/constant";
 
 const Testimonials = () => {
   return (
@@ -15,14 +15,13 @@ const Testimonials = () => {
           </div>
 
           {/* Content */}
-          <div className="relative z-10 max-w-3xl mx-auto space-y-4">
-            <span className="border border-white/80 text-white/80 text-xs px-3 py-1 rounded-full mb-4">
-              Testimonial
+          <div className="relative z-10 max-w-3xl mx-auto space-y-12">
+            <span className="border border-white/80 text-white/80 text-xs px-3 py-1 rounded-full">
+              {TestimonialSection.title}
             </span>
 
-            <h2 className="text-xl md:text-2xl font-semibold leading-relaxed">
-              "Bold helped me recognize my strengths and step outside my comfort
-              zone. I'm now living a more fulfilling and adventurous life."
+            <h2 className="text-xl md:text-2xl font-semibold leading-relaxed mt-8">
+              {TestimonialSection.quote}
             </h2>
 
             <div className="flex flex-col items-center space-y-2 mt-4">

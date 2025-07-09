@@ -1,5 +1,4 @@
 import { AppleIcon, PlaySquare, ThumbsUp } from "lucide-react";
-import React from "react";
 import { BoldnessTraitsSection } from "../constants/constant";
 import { Images } from "../constants/constant";
 
@@ -16,70 +15,38 @@ const Bold = () => {
               {BoldnessTraitsSection.title}
             </h3>
             <p className="text-sm md:text-md font-semibold text-foreground/70 leading-tight mb-6 text-start md:mt-6 mt-3">
-              We believe that everyone possesses unique traits and strengths
-              that, when embraced, can lead to personal growth, fulfillment, and
-              success.
+              {BoldnessTraitsSection.description}
             </p>
             <div className="flex justify-center md:justify-start items-center gap-6 my-8">
-              <div className="flex-between gap-2">
-                <PlaySquare size={28}></PlaySquare>
-                <span className="font-semibold">PlayStore</span>
-              </div>
-
-              <div className="flex-between gap-2">
-                <AppleIcon size={28}></AppleIcon>
-                <span className="font-semibold">AppStore</span>
-              </div>
+              {BoldnessTraitsSection.appDownload.avail.map((item, key) => (
+                <div key={key} className="flex-between gap-2">
+                  {item.icon}
+                  <span className="font-semibold">{item.platform}</span>
+                </div>
+              ))}
             </div>
-            <a className="solid-button max-sm:place-self-center w-fit cursor-pointer">Download Now</a>
+            <a
+              href={BoldnessTraitsSection.appDownload.btn.link}
+              className="solid-button max-sm:place-self-center w-fit cursor-pointer"
+            >
+              {BoldnessTraitsSection.appDownload.btn.title}
+            </a>
           </div>
 
           <div className="flex flex-col justify-start h-fit">
             <span className="border border-dark-green/80 text-dark-green/80 text-xs px-3 py-1 rounded-full max-w-fit mb-4">
-              Our Mission
+              {BoldnessTraitsSection.traits.title}
             </span>
             <div className="grid grid-cols-2 place-items-start p-2 gap-6">
-              <div className="flex-center gap-3">
-                <span className="text-sm p-2 bg-dark-green rounded-full text-secondary/80">
-                  <ThumbsUp></ThumbsUp>
-                </span>
-                <span className="text-sm font-bold">Confidance</span>
-              </div>
+              {BoldnessTraitsSection.traits.bt.map((item, key) => (
+                <div key={key} className="flex-center gap-3">
+                  <span className="text-sm p-2 bg-dark-green rounded-full text-secondary/80">
+                    {item.icon}
+                  </span>
+                  <span className="text-sm font-bold">{item.label}</span>
+                </div>
+              ))}
 
-              <div className="flex-center gap-3">
-                <span className="text-sm p-2 bg-dark-green rounded-full text-secondary/80">
-                  <ThumbsUp></ThumbsUp>
-                </span>
-                <span className="text-sm font-bold">Confidance</span>
-              </div>
-
-              <div className="flex-center gap-3">
-                <span className="text-sm p-2 bg-dark-green rounded-full text-secondary/80">
-                  <ThumbsUp></ThumbsUp>
-                </span>
-                <span className="text-sm font-bold">Confidance</span>
-              </div>
-
-              <div className="flex-center gap-3">
-                <span className="text-sm p-2 bg-dark-green rounded-full text-secondary/80">
-                  <ThumbsUp></ThumbsUp>
-                </span>
-                <span className="text-sm font-bold">Confidance</span>
-              </div>
-
-              <div className="flex-center gap-3">
-                <span className="text-sm p-2 bg-dark-green rounded-full text-secondary/80">
-                  <ThumbsUp></ThumbsUp>
-                </span>
-                <span className="text-sm font-bold">Confidance</span>
-              </div>
-
-              <div className="flex-center gap-3">
-                <span className="text-sm p-2 bg-dark-green rounded-full text-secondary/80">
-                  <ThumbsUp></ThumbsUp>
-                </span>
-                <span className="text-sm font-bold">Confidance</span>
-              </div>
             </div>
             <img
               src={Images[1]}

@@ -1,6 +1,7 @@
 import React from "react";
 import { Images } from "../constants/constant";
 import Scribble from "../components/Scribble";
+import { PersonalityTypesSection } from "../constants/constant";
 
 const Personality = () => {
   return (
@@ -35,18 +36,17 @@ const Personality = () => {
                 strokeWidth={10}
               />
               <span className="border border-white/80 text-white/80 text-xs px-3 py-1 rounded-full mb-4">
-                Our Mission
+                {PersonalityTypesSection.label}
               </span>
               {/* Illustration Placeholder */}
               <h3 className="text-xl md:text-2xl font-semibold text-white/80 leading-tight mb-2 text-start">
-                Our mission is to empower individuals to embrace their boldness
-                and live authentically.
+                {PersonalityTypesSection.title}
               </h3>
               <a
                 className="md:absolute md:bottom-5 text-sm font-semibold px-4 py-3 border border-white/80 rounded-full hover:border-white hover:scale-95 transition-all duration-300"
                 href=""
               >
-                Read More
+                {PersonalityTypesSection.cta}
               </a>
             </div>
           </div>
